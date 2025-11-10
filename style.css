@@ -17,16 +17,20 @@ main{
     height: 100vh;
     display: flex;
     align-items: center;
-    margin: 10% 0 0 10%;
+    margin: 1% 0 0 5%;
     width: 80vw;
     height: 80vh;
+}
+
+.contenedor{
+    margin: -15% 0% 0% 0%;
 }
 
 
 
 p{
     display: flex;
-    margin: 1% 10% 5% 0;
+    margin: 0 20% 5% 0;
     text-align: justify;
 }
 
@@ -67,6 +71,7 @@ ul{
     border: solid;
     border-color: #1E90FF;
     border-radius: 25px;
+    margin: -15% 0% 0% 0%;
 }
 
 header{
