@@ -25,7 +25,9 @@ main{
 
 
 p{
+    display: flex;
     margin: 1% 10% 5% 0;
+    text-align: justify;
 }
 
 nav{
