@@ -9,7 +9,6 @@ body{
     margin: 0;
     padding: 0;
     font-family: "Roboto","Segoe UI","Arial", "sans-serif";
-    font-weight: 00; /* Roboto Regular */
     font-weight: 400; /* Roboto Regular */
     background: linear-gradient(black 65%,#BC13FE 98%, #BF00FF 99%,#BE00FE 100%);
     color: white;
@@ -192,7 +191,14 @@ p{
 }
 
 @media (max-width: 900px) {
-    
+
+main {
+    display: block; /* Cambia de flex a block para un mejor apilamiento en móvil */
+    width: 100%; /* Usa el ancho completo */
+    margin: 0 auto; /* Centra el bloque main horizontalmente */
+    align-items: unset; /* Restablece align-items de flex */
+}
+
 header {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
@@ -212,23 +218,19 @@ header {
   .contenedor {
     display: block;
     box-sizing: border-box;
+    /* grid-template-columns: 1fr;  No estrictamente necesario si display es block, pero útil para claridad si fuera grid */
     overflow-x: hidden; /* evita scroll horizontal */
     margin: 0 auto;
     padding: 15px;
     font-size: 0.95rem;
     line-height: 1.5;
-    
+    text-align: justify; /* Centra el texto y los elementos en línea dentro de .contenedor */
 }
-  }
 
-  .contenedor p {
-    margin: 0 0 1rem 0;
-    text-align: justify; /* o center si prefieres */
-    margin: 0 auto 1rem auto;
-    text-align: justify;
+  .contenedor p { /* Esta regla ahora está correctamente dentro de la media query */
+    margin: 0 auto 1rem auto; /* Centra el bloque del párrafo */
+    text-align: justify; /* Centra el contenido de texto dentro del párrafo */
     word-break: break-word;
     overflow-wrap: break-word;
-
   }
-
 }
