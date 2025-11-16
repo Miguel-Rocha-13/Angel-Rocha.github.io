@@ -1,44 +1,34 @@
 html{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 }
     
 body{
+    width: 100vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
     font-family: "Roboto","Segoe UI","Arial", "sans-serif";
-    font-weight: 400; /* Roboto Regular */
+    font-weight: 00; /* Roboto Regular */
     background: linear-gradient(black 65%,#BC13FE 98%, #BF00FF 99%,#BE00FE 100%);
     color: white;
 }
 
-main{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
+header{
+    display: grid;
+    grid-template-columns: repeat(3,3fr);
+    background: linear-gradient(135deg, #000000 0%, #0f0f0f  33.33%, #212121 66.66%, #282828 100%);
     align-items: center;
-    margin: 1% 0 0 5%;
-    width: 80vw;
-    height: 80vh;
-}
-
-.contenedor{
-    margin: -15% 0% 0% 0%;
-}
-
-
-
-p{
-    display: flex;
-    margin: 0 20% 5% 0;
-    text-align: justify;
+    width: 100vw;    
 }
 
 nav{
-    font-size: 1em;
-    width: 30%;
-    margin: 1px 1px;
-    padding: 1px 20px;
+    width: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-items: right;
+    justify-content: center;
     border-radius: 10px;
     background-color: #FF0534;
     box-shadow: 
@@ -47,8 +37,6 @@ nav{
         0 0 10px #FF0534,
         0 0 20px #FF0534,
     inset 0 0 25px #FF0534;
-    display: flex;
-    justify-content: center;
 }
 
 ul{
@@ -58,6 +46,11 @@ ul{
     margin: 0;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
 #logo{
     width: 75px;
     height: 75px;
@@ -65,29 +58,44 @@ ul{
     padding: 0;
 }
 
+main{
+    display: flex;
+    align-items: center;
+    margin: 1% 0 0 5%;
+    width: 80%;
+}
+
+.contenedor{
+    box-sizing: border-box;
+    display:grid;
+    grid-template-columns: repeat(2,2fr);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word; /* rompe palabras largas */
+    word-break: break-word;    /* fuerza quiebre si es necesario */
+    hyphens: auto;             /* permite guiones automáticos si el idioma lo soporta */
+    padding: 20px;
+    justify-items: center;
+    place-items: center;
+}
+
+p{
+    display: flex;
+    margin: 0 auto 1.5rem auto;
+    text-align: justify;
+}
+
+
+
 #perfil{
     width: 300px;
     height: 300px;
     border: solid;
     border-color: #1E90FF;
     border-radius: 25px;
-    margin: -15% 0% 0% 0%;
+    margin: 20px auto;
 }
-
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1%;
-    background: linear-gradient(135deg, #000000 0%, #0f0f0f  33.33%, #212121 66.66%, #282828 100%);
-}
-
-a{
-    display: blockflex;
-    text-decoration: none;
-    color: white;
-}
-
 
 /*RIPPLE RINGS 736efe */
 .menu {
@@ -147,7 +155,7 @@ a{
     }
 }
 
-.btn-download {
+.btn {
   display: inline-flex;
   align-items: center;
   padding: 12px 20px;
@@ -160,7 +168,7 @@ a{
   transition: background-color 0.3s ease;
 }
 
-.btn-download:hover {
+.btn:hover {
   background-color: #0056b3;
 }
 
@@ -181,3 +189,43 @@ a{
 .text-container p {
     text-align: justify;
 }
+
+@media (max-width: 900px) {
+    
+header {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    text-align: center;
+    justify-content: center;
+    width: auto;
+  }
+
+
+  #perfil {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+  }     
+
+  .contenedor {
+    display: block;
+    box-sizing: border-box;
+    overflow-x: hidden; /* evita scroll horizontal */
+    margin: 0 auto;
+    padding: 15px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    
+}
+  }
+
+  .contenedor p {
+    margin: 0 0 1rem 0;
+    text-align: justify; /* o center si prefieres */
+    margin: 0 auto 1rem auto;
+    word-break: break-word;
+    overflow-wrap: break-word;
+
+  }
+
