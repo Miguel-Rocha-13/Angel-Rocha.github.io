@@ -10,6 +10,7 @@ body{
     padding: 0;
     font-family: "Roboto","Segoe UI","Arial", "sans-serif";
     font-weight: 00; /* Roboto Regular */
+    font-weight: 400; /* Roboto Regular */
     background: linear-gradient(black 65%,#BC13FE 98%, #BF00FF 99%,#BE00FE 100%);
     color: white;
 }
@@ -224,8 +225,10 @@ header {
     margin: 0 0 1rem 0;
     text-align: justify; /* o center si prefieres */
     margin: 0 auto 1rem auto;
+    text-align: justify;
     word-break: break-word;
     overflow-wrap: break-word;
 
   }
 
+}
