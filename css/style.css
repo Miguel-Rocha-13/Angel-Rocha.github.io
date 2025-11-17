@@ -1,6 +1,6 @@
 html{
     width: 100vw;
-    height: 115vh;
+    height: 100vh;
 }
     
 body{
@@ -10,7 +10,7 @@ body{
     padding: 0;
     font-family: "Roboto","Segoe UI","Arial", "sans-serif";
     font-weight: 400; /* Roboto Regular */
-    background: linear-gradient(black 45%,#BC13FE 98%, #BF00FF 99%,#BE00FE 115%);
+    background: linear-gradient(black 45%,#BC13FE 98%, #BF00FF 99%,#BE00FE 100%);
     color: white;
 }
 
@@ -64,6 +64,13 @@ main{
     margin: 1% 0 0 5%;
     width: 80%;
     flex-direction: column;
+}
+
+#titulo{
+    width: 30%;
+    height: 60%;
+    margin: 0;
+    padding: 0;
 }
 
 .contenedor{
@@ -191,57 +198,9 @@ p{
     text-align: justify;
 }
 
-@media (max-width: 1024px) {
-
-main {
-    display: block; /* Cambia de flex a block para un mejor apilamiento en móvil */
-    width: 100%; /* Usa el ancho completo */
-    margin: 0 auto; /* Centra el bloque main horizontalmente */
-    align-items: unset; /* Restablece align-items de flex */
-}
-
-header {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    text-align: center;
-    justify-content: center;
-    width: auto;
-  }
-
-
-  #perfil {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 20px auto;
-  }     
-
-  .contenedor {
-    display: block;
-    box-sizing: border-box;
-    /* grid-template-columns: 1fr;  No estrictamente necesario si display es block, pero útil para claridad si fuera grid */
-    overflow-x: hidden; /* evita scroll horizontal */
-    margin: 0 auto;
-    padding: 15px;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    text-align: justify; /* Centra el texto y los elementos en línea dentro de .contenedor */
-}
-
-  .contenedor p { /* Esta regla ahora está correctamente dentro de la media query */
-    margin: 0 auto 1rem auto; /* Centra el bloque del párrafo */
-    text-align: justify; /* Centra el contenido de texto dentro del párrafo */
-    word-break: break-word;
-    overflow-wrap: break-word;
-  }
-  #AngelRocha{
-    text-align: center;
-  }
-}
-
 /*CONTACTO Y PROYECTO*/
 
-#contenedor-contacto-proyectos{
+.contenedor-contacto-proyectos{
     margin: 50px;
 }
 
@@ -342,6 +301,7 @@ h3{
 }
 
 @media (max-width: 1024px) {
+
     #descripcion, .enlaces {
         width: 90%;
     }
@@ -349,4 +309,50 @@ h3{
     #contenedor {
         margin: 20px 0;
     }
+    main {
+    display: block; /* Cambia de flex a block para un mejor apilamiento en móvil */
+    width: 100%; /* Usa el ancho completo */
+    margin: 0 auto; /* Centra el bloque main horizontalmente */
+    align-items: unset; /* Restablece align-items de flex */
+    }
+
+    header {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    text-align: center;
+    justify-content: center;
+    width: auto;
+    }
+
+
+    #perfil {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    }     
+
+    .contenedor {
+    display: block;
+    box-sizing: border-box;
+    /* grid-template-columns: 1fr;  No estrictamente necesario si display es block, pero útil para claridad si fuera grid */
+    overflow-x: hidden; /* evita scroll horizontal */
+    margin: 0 auto;
+    padding: 15px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: justify; /* Centra el texto y los elementos en línea dentro de .contenedor */
+    }
+
+    .contenedor p { /* Esta regla ahora está correctamente dentro de la media query */
+    margin: 0 auto 1rem auto; /* Centra el bloque del párrafo */
+    text-align: justify; /* Centra el contenido de texto dentro del párrafo */
+    word-break: break-word;
+    overflow-wrap: break-word;
+    }
+    #AngelRocha{
+    text-align: center;
+    }
+
+
 }
