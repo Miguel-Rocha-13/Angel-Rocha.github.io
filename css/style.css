@@ -10,8 +10,8 @@ body{
     padding: 0;
     font-family: "Roboto","Segoe UI","Arial", "sans-serif";
     font-weight: 400; /* Roboto Regular */
-    background: linear-gradient(black 45%,#BC13FE 98%, #BF00FF 99%,#BE00FE 100%);
     color: white;
+    background: -webkit-linear-gradient(black 55%,#0303B5 85%);
 }
 
 header{
@@ -64,6 +64,11 @@ main{
     margin: 1% 0 0 5%;
     width: 80%;
     flex-direction: column;
+}
+
+#contacto-proyectos{
+    width: 90vw; /* Usa el ancho completo */
+    margin: 0 auto; /* Centra el bloque main horizontalmente */
 }
 
 #titulo{
@@ -205,7 +210,7 @@ p{
 }
 
 span{
-    padding: 10px;
+    padding: 5px;
     border-radius: 4px;
 }
 
